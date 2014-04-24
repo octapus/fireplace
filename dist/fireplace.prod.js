@@ -4,8 +4,8 @@
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 
-// v0.0.9
-// e439653 (2014-04-12 01:19:24 +0100)
+// v0.0.10-1-gaa84797
+// aa84797 (2014-04-23 22:46:16 -0400)
 
 (function() {
 
@@ -2067,7 +2067,7 @@ FP.Store = Ember.Object.extend({
     if (options.path) {
       reference = model.buildFirebaseRootReference(this).child(options.path);
     } else {
-      reference = model.buildFirebaseReference(this, query);
+      reference = model.buildFirebaseReference(this, options);
     }
 
     return this.findFetchCollectionByReference(model, reference, query, options, returnPromise);
@@ -2257,6 +2257,7 @@ FP.Store = Ember.Object.extend({
   }
 
 });
+
 
 })();
 
